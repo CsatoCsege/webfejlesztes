@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background-color: rgb(221,221,221);
+    padding: 0px;
+    margin: 0px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.fokep {
+    width: 100%;
+    height: 70px;
+    padding-top: 20px;
+}
+.kep{
+    width: 96%;
+    border: 5px solid #6a6a6a;
+    margin: 1%;
+}
+.foadat {
+    flex-basis: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: justify;
+}
+.focim{
+    flex-basis: 100%;
+    font-weight: bold;
+}
+.adat {
+    flex-basis: 100%;
+    padding-left: 5%;
+    padding-right: 15%;
+    text-align: justify;
+}
+.cim{
+    flex-basis: 85%;
+    font-weight: bold;
+    padding-left: 15%;
+}
+footer{
+    flex-basis: 100%;
+    padding: 5%;
+}
+/* navabar */
+.navbar {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.navbar div {
+    margin-top: 5px;
+    margin-bottom: 5px; 
+    width: 90%; 
+}
+.navbar a {
+    text-decoration: none; 
+    color: white; 
+    background-color: #6a6a6a;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block; 
+    text-align: center; 
+    width: 100%; 
+}
+.navbar a:hover {
+    background-color: #4a4a4a; 
+}
+/*navbar vege*/
+.vissza{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 50%; 
+}
+.vissza a {
+    text-decoration: none; 
+    color: white; 
+    background-color: #6a6a6a;
+    padding: 10px;
+    border-radius: 5px;
+    display: block; 
+    text-align: center; 
+    width: 100%; 
+}
+/*vs*/
+.otthon{
+    flex-basis: 100%;
+    background-color: #fa8072;
+}
+.koncerten{
+    flex-basis: 100%;
+    background-color: #8080ff;
+}
+.nagycim{
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}
+.csuklik-p{
+    display: none; 
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #A45A52;
+    border-bottom: 1px solid #5E1914;
+}
+.csuklik-k{
+    display: none; 
+    padding:10px;
+    border-radius: 10px;
+    background-color: #0D52BD;
+    border-bottom: 1px solid #101D6B;
+}
+.lenyit{
+    flex-basis: 85%;
+    font-weight: bold;
+    padding-left: 15%;
+    cursor: pointer;
+}
+/*vs vege*/
+/*eloadok*/
+.circle-links {
+    display: flex;
+    flex-direction: column; /* Képek külön sorban */
+    align-items: center; /* Középre igazítás */
+    gap: 20px; /* Távolság a képek között */
+    margin: 20px 0;
+}
+
+.circle {
+    width: 150px; /* Kör átmérője */
+    height: 150px; /* Kör átmérője */
+    border-radius: 50%; /* Kör forma */
+    overflow: hidden; /* Körön kívüli részek elrejtése */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Enyhe árnyék */
+    transition: transform 0.3s ease; /* Hover effekt animáció */
+}
+
+.circle:hover {
+    transform: scale(1.1); /* Hover esetén nagyítás */
+}
+
+.circle img {
+    width: 100%; /* Kép teljes kitöltése */
+    height: 100%;
+    object-fit: cover; /* Kép arányainak megtartása a körben */
+}
+
+.circle a {
+    display: block; /* Az egész kör kattintható */
+}
+.zenecim{
+    font-weight: bold;
+    text-align: center;
+}
+.dalszoveg{
+    font-family: Verdana, Tahoma, sans-serif;
+    padding-left: 2%;
+    font-size: 12px;
+}
+/*eloadok vege*/
+@media all and (min-width: 600px) {
+    /*tablet*/
+    
+}
+
+@media all and (min-width: 768px) {
+    /*számítógép*/
+    
+}
