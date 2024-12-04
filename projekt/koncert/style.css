@@ -1,0 +1,321 @@
+@font-face {
+    font-family: "web";
+    src: url(../kepek/Lexend/Lexend-VariableFont_wght.ttf);
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background-color: rgb(221,221,221);
+    padding: 0px;
+    margin: 0px;
+    font-family: "web";
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+hr{
+    width: 100%;
+}
+.fokep {
+    width: 100%;
+    height: 70px;
+    padding-top: 20px;
+}
+.kep{
+    width: 96%;
+    border: 5px solid #6a6a6a;
+    margin: 1%;
+}
+.foadat {
+    flex-basis: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: justify;
+}
+.focim{
+    flex-basis: 100%;
+    font-weight: bold;
+}
+.adat {
+    flex-basis: 100%;
+    padding-left: 5%;
+    padding-right: 15%;
+    text-align: justify;
+}
+.cim{
+    flex-basis: 85%;
+    font-weight: bold;
+    padding-left: 15%;
+}
+footer{
+    flex-basis: 100%;
+    padding: 5%;
+}
+/* navabar */
+.navbar {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.navbar div {
+    margin-top: 5px;
+    margin-bottom: 5px; 
+    width: 90%; 
+}
+.navbar a {
+    text-decoration: none; 
+    color: white; 
+    background-color: #6a6a6a;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block; 
+    text-align: center; 
+    width: 100%; 
+    font-size: large;
+    margin-top: 10px;
+}
+.navbar a:hover {
+    background-color: #4a4a4a; 
+}
+.aktiv a{
+    background-color: #4a4a4a;
+}
+/*navbar vege*/
+.vissza{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 50%; 
+}
+.vissza a {
+    text-decoration: none; 
+    color: white; 
+    background-color: #6a6a6a;
+    padding: 10px;
+    border-radius: 5px;
+    display: block; 
+    text-align: center; 
+    width: 100%;
+}
+/*vs*/
+.otthon{
+    flex-basis: 100%;
+    background-color: #fa8072;
+}
+.koncerten{
+    flex-basis: 100%;
+    background-color: #8080ff;
+}
+.nagycim{
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}
+.csuklik-p{
+    display: none; 
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #A45A52;
+    border-bottom: 1px solid #5E1914;
+}
+.csuklik-k{
+    display: none; 
+    padding:10px;
+    border-radius: 10px;
+    background-color: #0D52BD;
+    border-bottom: 1px solid #101D6B;
+}
+.lenyit{
+    flex-basis: 85%;
+    font-weight: bold;
+    padding-left: 15%;
+    cursor: pointer;
+}
+.kepkeret{
+    display: flex; 
+    justify-content: center; 
+}
+/*vs vege*/
+/*eloadok*/
+.circle-links {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Távolság a képek között */
+    margin: 20px 0;
+}
+
+.circle {
+    width: 150px; /* Kör átmérője */
+    height: 150px; /* Kör átmérője */
+    border-radius: 50%; /* Kör forma */
+    overflow: hidden; /* Körön kívüli részek elrejtése */
+    transition: transform 0.3s ease; /* animáció */
+}
+
+.circle:hover {
+    transform: scale(1.1); /*nagyitas*/
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*meretmegmaradjon*/
+}
+
+.circle a {
+    display: block; 
+}
+.zenecim{
+    font-weight: bold;
+    text-align: center;
+}
+.dalszoveg{
+    font-family: Verdana, Tahoma, sans-serif;
+    padding-left: 2%;
+    font-size: 12px;
+    text-align: center;
+    flex-basis: 100%;
+}
+/*eloadok vege*/
+/*jatek*/
+#results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.result-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.result-question, .result-user-answer, .result-correct-answer, .result-song-info {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.result-user-answer {
+    color: #007bff;
+}
+
+.result-correct-answer {
+    color: #28a745;
+}
+
+.result-song-info {
+    font-style: italic;
+    color: #6c757d;
+}
+/*jatek vege*/
+/*kepek*/
+h1{
+    text-align: center;
+    width: 100%;
+    padding-top: 50px;
+    font-weight: 1000;
+}
+.kuld{ 
+    color: white; 
+    background-color: #6a6a6a;
+    padding: 10px;
+    text-align: center; 
+    width: 50%;
+    border: black;
+    border-radius: 5px;
+}
+.formom{
+    text-align: center;
+}
+/*kepek vege*/
+@media all and (min-width: 600px) {
+    .container {
+        flex-direction: row; 
+        justify-content: space-around;
+    }
+    .foadat, .adat {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .lenyit{
+        flex-basis: 100%;
+        font-weight: bold;
+        padding-left: 0%;
+        cursor: pointer;
+        text-align: center;
+    }
+    .csuklik-k{
+        flex-basis: 100%;
+        padding-left: 0%;
+        text-align: center;
+    }
+    .csuklik-p{
+        flex-basis: 100%;
+        padding-left: 0%;
+        text-align: center;
+    }
+    .circle-links {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px;
+        margin: 20px 0;
+    }
+    .teljes{
+        flex-basis: 100%;
+    }
+    .dalszoveg{
+        padding-left: 0%;
+    }
+    .kep {
+        width: 48%; 
+    }
+    .vissza {
+        width: 40%; 
+    }
+    .navbar{
+        flex-wrap: wrap;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .container {
+        justify-content: space-around;
+    }
+    .navbar {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .navbar div {
+        margin: 0 10px; 
+        width: auto; 
+    }
+    .navbar a {
+        padding: 10px 30px; 
+    }
+    .kep {
+        width: 30%; 
+    }
+    .vissza {
+        width: 30%; 
+    }
+    .circle-links {
+        flex-direction: row; 
+    }
+}

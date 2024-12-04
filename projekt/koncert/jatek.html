@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="../kepek/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Csató Csege Károly">
+    <title>koncert</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        #game, #results {
+            display: none;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #feedback {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img class="fokep" src="../kepek/cim.svg" alt="cím">
+            <div class="navbar">
+                <div>
+                    <a href="index.html">Általános</a>
+                </div>
+                <div>
+                    <a href="versus.html">Versus</a>
+                </div>
+                <div>
+                    <a href="eloadok.html">Előadók</a>
+                </div>
+                <div>
+                    <a href="koncertek.html">Koncertek</a>
+                </div>
+                <div>
+                    <a href="galeria.html">Galéria</a>
+                </div>
+                <div class="aktiv">
+                    <a href="#">Játék</a>
+                </div>
+            </div>
+        </nav>
+        
+        <h1>Költő vagy Rapper játék</h1>
+        <div id="start-screen">
+            <button id="start-game">Játsszunk!</button>
+        </div>
+        <div id="game">
+            <p id="question"></p>
+            <p id="feedback"></p>
+            <button id="poet-button">Költő</button>
+            <button id="rapper-button">Rapper</button>
+            <button id="next-question">Következő</button>
+            <button id="end-game">Eredmények</button>
+        </div>
+        <div id="results">
+            <h2>Eredmények</h2>
+            <table id="summary-table">
+                <thead>
+                    <tr>
+                        <th>Kérdés</th>
+                        <th>Válasz</th>
+                        <th>Helyes válasz</th>
+                        <th>Zene előadója és címe</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <p id="summary"></p>
+            <button id="restart-game">Újra!</button>
+        </div>
+        <script src="../js/jatek.js"></script>
+
+        <footer>
+            <hr>
+            <p>Az oldalt Csató Csege Károly gazdaságinformatikus hallgató készítette, szórakoztatás céljából!</p>
+        </footer>
+    </div>
+</body>
+</html>

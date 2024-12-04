@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Csató Csege Károly">
+    <link rel="icon" type="image" href="../kepek/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>koncert</title>
+    <script src="../js/nyito.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img class="fokep" src="../kepek/cim.svg" alt="cím">
+            <div class="navbar">
+                <div>
+                    <a href="index.html">Általános</a>
+                </div>
+                <div class="aktiv">
+                    <a href="#">Versus</a>
+                </div>
+                <div>
+                    <a href="eloadok.html">Előadók</a>
+                </div>
+                <div>
+                    <a href="koncertek.html">Koncertek</a>
+                </div>
+                <div>
+                    <a href="galeria.html">Galéria</a>
+                </div>
+                <div>
+                    <a href="jatek.html">Játék</a>
+                </div>
+            </div>
+        </nav>
+        <div class="foadat">
+            <p class="cim">
+                Otthon vagy koncerten?
+            </p>
+            <p>
+                A zenehallgatás mindenki számára különleges élmény, amely segít kikapcsolódni, érzelmeket átélni, vagy akár inspirációt meríteni. Azonban az, hogy valaki otthon hallgat zenét vagy koncerteken élvezi azt, teljes mértékben egyéni preferenciákon múlik. Mindkét forma saját előnyökkel jár, és más-más élményt nyújt. Lássuk az érveket mindkét oldalról!
+            </p>
+        </div>
+
+        <div class="otthon">
+            <p class ="nagycim">Zenehallgatás: Otthon</p>
+            <article class="adat">
+                <p class="lenyit" onclick="csuk('csuklasos1')">
+                    Kényelem és rugalmasság
+                </p>
+                <div id="csuklasos1" class="csuklik-p">
+                    <p>
+                        Otthon bármikor hallgathatunk zenét, anélkül, hogy időpontokhoz vagy helyszínekhez lennénk kötve. Az ágyból vagy a kanapéról, kényelmesen élvezhetjük kedvenceinket.
+                    </p>
+                </div>
+            </article>
+            <article class="adat">
+                <p class="lenyit" onclick="csuk('csuklasos2')">
+                    Egyedi élmény kialakítása
+                </p>
+                <div id="csuklasos2" class="csuklik-p">
+                    <p>
+                        A saját zenei ízlésünk szerint válogathatjuk össze a lejátszási listákat, és azt hallgatjuk, amit éppen szeretnénk. A hangerőt, a hangminőséget és a környezetet is teljes mértékben kontrollálhatjuk.
+                    </p>
+                </div>
+            </article>
+            <article class="adat">
+                <p class="lenyit" onclick="csuk('csuklasos3')">
+                    Költséghatékonyság
+                </p>
+                <div id="csuklasos3" class="csuklik-p">
+                    <p>
+                        Egy koncertjegy ára gyakran magas, míg az otthoni zenehallgatáshoz csak egy zenei streaming-előfizetés vagy meglévő gyűjtemény szükséges.
+                    </p>
+                </div>
+            </article>
+            <article class="adat">
+                <p class="lenyit" onclick="csuk('csuklasos4')">
+                    Intim és személyes élmény
+                </p>
+                <div id="csuklasos4" class="csuklik-p">
+                    <p>
+                        Otthon nem kell osztozni az élményen másokkal. Ez különösen jó lehet, ha valaki mélyebb érzelmi kapcsolatot szeretne kialakítani a zenével.
+                    </p>
+                </div>
+            </article>
+            <article class="adat">
+                <p class="lenyit" onclick="csuk('csuklasos5')">
+                    Zajmentes környezet
+                </p>
+                <div id="csuklasos5" class="csuklik-p">
+                    <p>
+                        Nincs zavaró tömeg vagy zaj, így teljes mértékben a zenére koncentrálhatunk.
+                    </p>
+                </div>
+            </article>
+            <div class="kepkeret">
+                <img class="kep" src="../kepek/vs/otthon.jpg" alt="Zenehallgatás otthon">
+            </div>
+        </div>
+        <div class="koncerten">
+            <p class="nagycim">
+                Zenehallgatás: Koncerten
+            </p>
+            <article class="adat">
+                <p class="lenyit" onclick="csuk('csuklasos6')">
+                    Közösségi élmény
+                </p>
+                <div id="csuklasos6" class="csuklik-k">
+                    <p>
+                        Egy koncerten a közös szenvedély összehozza az embereket. Együtt énekelni a tömeggel vagy osztozni az energiában olyan élményt ad, amelyet otthon nem lehet átélni.
+                    </p>
+                </div>
+            </article>
+            <article class="adat">
+                <p class="lenyit" onclick="csuk('csuklasos7')">
+                    Az élő zene varázsa
+                </p>
+                <div id="csuklasos7" class="csuklik-k">
+                    <p>
+                        Az élő előadás hangulata és a zenészek jelenléte intenzívebbé és emlékezetesebbé teszi a zenét. A koncerten gyakran hallhatunk improvizációkat vagy különleges verziókat.
+                    </p>
+                </div>
+            </article>
+            <article class="adat">
+                <p class="lenyit" onclick="csuk('csuklasos8')">
+                    Vizualitás és atmoszféra
+                </p>
+                <div id="csuklasos8" class="csuklik-k">
+                    <p>
+                        A koncertek látványvilága (fények, díszletek, vetítések) hozzájárul az élményhez. Ez egy multiszenzoros esemény, amely nemcsak a fület, hanem a szemet is elvarázsolja.
+                    </p>
+                </div>
+            </article>
+            <article class="adat">
+                <p class="lenyit" onclick="csuk('csuklasos9')">
+                    Kapcsolat a zenészekkel
+                </p>
+                <div id="csuklasos9" class="csuklik-k">
+                    <p>
+                        Egy koncert lehetőséget ad arra, hogy a rajongók közvetlenebbül kapcsolódjanak a zenészekhez, érezzék az előadók energiáját és jelenlétét.
+                    </p>
+                </div>
+            </article>
+            <article class="adat">
+                <p class="lenyit" onclick="csuk('csuklasos10')">
+                    Emlékezetes esemény
+                </p>
+                <div id="csuklasos10" class="csuklik-k">
+                    <p>
+                        A koncertek gyakran életre szóló élményként maradnak meg. A barátokkal való közös élmények, a kedvenc zenekarokkal töltött idő különleges emléket jelenthet.
+                    </p>
+                </div>
+            </article>
+            <div class="kepkeret">
+                <img class="kep" src="../kepek/vs/koncert.jpg" alt="Zenehallgatás koncerten">
+            </div>
+        </div>
+        <footer>
+            <hr>
+            <p>Az oldalt Csató Csege Károly gazdaságinformatikus hallgató készítette, szórakoztatás céljából!</p>
+        </footer>
+    </div>
+</body>
+</html>

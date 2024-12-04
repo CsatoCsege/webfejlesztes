@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Csató Csege Károly">
+    <link rel="icon" type="image" href="../kepek/logo.png">
+    <title>koncert</title>
+    <style>
+        label.error{
+            color: red;
+        }
+    </style>
+    <script src="../js/jquery-3.7.1.js"></script>
+    <script src="..//jquery-validation-1.19.5/dist/jquery.validate.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        $(document).ready(function(){
+        $("#myform").validate({
+        rules: {
+        name: "required",
+        eloado: "required",
+        koncert: "required",
+        jegy: "required",
+        legnagyobb: "required",
+        elmeny: "required",
+        mennyi: {
+        required: true,
+        },
+        },
+        messages: {
+        name: "Add meg a neved!",
+        eloado: "Add meg egy előadó nevét!",
+        koncert: "Add meg egy koncertet!",
+        jegy: "Add meg a legdrágább jegy értékét!",
+        legnagyobb: "Legnagyobb koncerten lévők számát add meg!",
+        elmeny: "Add meg a kedvenc élményedet!",
+        mennyi: "Add meg hány koncerten voltal!",
+        },
+        errorPlacement: function(error, element) {
+            if (element.attr("name") === "mennyi") {
+                error.insertAfter("#mennyi-csop"); // A hibaüzenet a csoport után jelenik meg
+            } else {
+                error.insertAfter(element); // Alapértelmezett elhelyezés
+            }
+        }
+        });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img class="fokep" src="../kepek/cim.svg" alt="cím">
+            <div class="navbar">
+                <div>
+                    <a href="index.html">Általános</a>
+                </div>
+                <div>
+                    <a href="versus.html">Versus</a>
+                </div>
+                <div>
+                    <a href="eloadok.html">Előadók</a>
+                </div>
+                <div class="aktiv">
+                    <a href="#">Koncertek</a>
+                </div>
+                <div>
+                    <a href="galeria.html">Galéria</a>
+                </div>
+                <div>
+                    <a href="jatek.html">Játék</a>
+                </div>
+            </div>
+        </nav>
+        <hr>
+        <div class="formom">
+            <form action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" method="post" id="myform" novalidate>
+                <h1>Koncertek szokások</h1>
+                <p><label for="name">Hogyan hívnak?</label>
+                    <input type="text" name="name" id="name">
+                </p>
+                <p>Hány konceretn voltál? <br>
+                    <div id="mennyi-csop">
+                        <input type="radio" name="mennyi" id="5" value="kevesebb mint 5">
+                        <label for="5">kevesebb mint 5</label><br>
+                        <input type="radio" name="mennyi" id="10" value="körülbelül 10">
+                        <label for="10">körülbelül 10</label><br>
+                        <input type="radio" name="mennyi" id="15" value="több mint 15">
+                        <label for="15">több mint 15</label><br>
+                    </div>
+                </p>
+                <p><label for="eloado">Kedvenc előadód?</label>
+                    <input type="text" name="eloado" id="eloado">
+                </p>
+                <p><label for="koncert">Kedvenc koncerted?</label>
+                    <input type="text" name="koncert" id="koncert">
+                </p>
+                <p><label for="jegy">Mennyibe került a legdrágább jegy?</label>
+                    <input type="text" name="jegy" id="jegy">
+                </p>
+                <p><label for="legnagyobb">Melyik volt a legnagyobb koncert?</label>
+                    <input type="text" name="legnagyobb" id="legnagyobb">
+                </p>
+                <p><label for="elmeny">Kedvenc élményed?</label>
+                    <input type="text" name="elmeny" id="elmeny">
+                </p>
+                <p>Fizettél már<br>
+                    <input type="checkbox" name="penz1" id="penz" value="több mint 10000">
+                    <label for="penz1">több mint 10000-et</label><br>
+                    <input type="checkbox" name="penz2" id="penz" value="több mint 20000">
+                    <label for="penz2">több mint 20000-et</label><br>
+                    <input type="checkbox" name="penz3" id="penz" value="több mint 30000">
+                    <label for="penz3">több mint 30000-et</label><br>
+                    <input type="checkbox" name="penz4" id="penz" value="több mint 40000">
+                    <label for="penz4">több mint 40000-ret</label><br>
+                </p>
+                <p><input class="kuld" type="submit" value="Elküld"></p>
+            </form>
+        </div>
+        
+
+        <footer>
+            <hr>
+            <p>Az oldalt Csató Csege Károly gazdaságinformatikus hallgató készítette, szórakoztatás céljából!</p>
+        </footer>
+    </div>
+</body>
+</html>

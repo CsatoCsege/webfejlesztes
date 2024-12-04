@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Csató Csege Károly">
+    <link rel="icon" type="image" href="../kepek/logo.png">
+    <link rel="stylesheet" type="text/css" href="../kepek/koncert/slick-1.8.1/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="../kepek/koncert/slick-1.8.1/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="style.css">
+    <title>koncert</title>
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .slider {
+            width: 80%;
+            min-width: 400px;
+            margin: 100px auto;
+        }
+
+        .slick-slide {
+            margin: 0px 5px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            opacity: .2;
+        }
+
+        .slick-active {
+            opacity: .5;
+        }
+
+        .slick-current {
+            opacity: 1;
+        }
+    </style>
+    
+
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img class="fokep" src="../kepek/cim.svg" alt="cím">
+            <div class="navbar">
+                <div>
+                    <a href="index.html">Általános</a>
+                </div>
+                <div>
+                    <a href="versus.html">Versus</a>
+                </div>
+                <div>
+                    <a href="eloadok.html">Előadók</a>
+                </div>
+                <div>
+                    <a href="koncertek.html">Koncertek</a>
+                </div>
+                <div class="aktiv">
+                    <a href="#">Galéria</a>
+                </div>
+                <div>
+                    <a href="jatek.html">Játék</a>
+                </div>
+            </div>
+        </nav>
+        <hr>
+        <h1>Saját képek koncertekről</h1>
+        <section class="center slider">
+            <div><img src="../kepek/koncert/kepek/apu.jpg" alt="Bye Alex" title="apu"></div>
+            <div><img src="../kepek/koncert/kepek/elegans.jpeg" alt="elegansban" title="elegans"></div>
+            <div><img src="../kepek/koncert/kepek/frakk.jpeg" alt="Lil Frakk" title="Frakk"></div>
+            <div><img src="../kepek/koncert/kepek/gang.jpeg" alt="csapat" title="insta"></div>
+            <div><img src="../kepek/koncert/kepek/gang2.jpeg" alt="csapatos" title="feszitos"></div>
+            <div><img src="../kepek/koncert/kepek/ibbi.jpg" alt="ibbigang" title="szinpad"></div>
+            <div><img src="../kepek/koncert/kepek/ibbi2.jpg" alt="ibbigang" title="felettunk"></div>
+            <div><img src="../kepek/koncert/kepek/monyo.jpg" alt="Monyo" title="szinpad"></div>
+            <div><img src="../kepek/koncert/kepek/otl.jpg" alt="OTL" title="OnTheLow"></div>
+            <div><img src="../kepek/koncert/kepek/tomeg.jpg" alt="tomeg" title="sokan vagyunk"></div>
+            <div><img src="../kepek/koncert/kepek/vaj.jpg" alt="Barátommal" title="tartjuk a frontot"></div>
+        </section>
+        <script src="../js/jquery-3.7.1.js"></script>
+        <script src="../kepek/koncert/slick-1.8.1/slick-1.8.1/slick/slick.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+    
+                $(".center").slick({
+                    dots: true,
+                    infinite: true,
+                    centerMode: true,
+                    centerPadding: '60px',
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    responsive: [
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                arrows: false,
+                                centerPadding: '60px',
+                                slidesToShow: 3
+                            }
+                        },
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                arrows: false,
+                                centerPadding: '60px',
+                                slidesToShow: 1
+                            }
+                        }
+                    ]
+                });
+    
+    
+            });
+        </script>
+        <div class="vissza">    
+            <a href="index.html">Vissza</a>
+        </div>
+        <footer>
+            <hr>
+            <p>Az oldalt Csató Csege Károly gazdaságinformatikus hallgató készítette, szórakoztatás céljából!</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
