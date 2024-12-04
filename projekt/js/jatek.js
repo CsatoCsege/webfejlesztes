@@ -14,12 +14,12 @@ const questions = [
     { text: "Alvó szegek a jéghideg homokban. Plakátmagányban ázó éjjelek. Égve hagytad a folyosón a villanyt. Ma ontják véremet.", answer: "költő", zeneElőadója: "Pilinszky János", zeneCíme: "Négysoros" },
 ];
 
-let currentQuestionIndex = 0;
-let score = 0;
-let totalQuestions = questions.length;
-let userAnswers = Array(totalQuestions).fill(null); // Felhasználó válaszai (null, "költő", vagy "repper")
+let currentQuestionIndex = 0; // kérdések sora
+let score = 0; //pontok
+let totalQuestions = questions.length; //annyi kérdes amennyi sor a kérdésekben
+let userAnswers = Array(totalQuestions).fill(null); // Felhasználó válaszai ((üres,null),alapból majd "költő", vagy "repper")
 
-// Elemek kiválasztása
+//
 const startScreen = document.getElementById('start-screen');
 const gameScreen = document.getElementById('game');
 const resultsScreen = document.getElementById('results');
@@ -34,7 +34,7 @@ const endGameButton = document.getElementById('end-game');
 const startButton = document.getElementById('start-game');
 const restartButton = document.getElementById('restart-game');
 
-// Játék indítása
+// Játék elindítása
 startButton.addEventListener('click', startGame);
 
 function startGame() {
@@ -48,22 +48,20 @@ function startGame() {
     showQuestion();
 }
 
-// Kérdés megjelenítése
+// kérdés megjelenítése
 function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     questionElement.textContent = currentQuestion.text;
     feedbackElement.textContent = ""; // Visszajelzés törlése
-    poetButton.disabled = false;
+    poetButton.disabled = false; //alapból kiválaszthatjuk költő vagy rapper
     rapperButton.disabled = false;
-    nextButton.style.display = 'none';
+    nextButton.style.display = 'none'; //először válaszolnunk kell utánna jöhet a kövi kérdés
 }
 
-// Válasz feldolgozása
+// felhasználó válaszának eltárolása pontszámitas
 function handleAnswer(userAnswer) {
-    const correctAnswer = questions[currentQuestionIndex].answer;
-
+    const correctAnswer = questions[currentQuestionIndex].answer; // jovalasz lekérese
     userAnswers[currentQuestionIndex] = userAnswer; // Felhasználó válaszának rögzítése
-
     if (userAnswer === correctAnswer) {
         feedbackElement.textContent = "Eltaláltad!";
         feedbackElement.style.color = "green";
@@ -72,19 +70,18 @@ function handleAnswer(userAnswer) {
         feedbackElement.textContent = "Sajnos nem.";
         feedbackElement.style.color = "red";
     }
-
-    poetButton.disabled = true;
+    poetButton.disabled = true; //már nem lehet haszálni (elsötétül)
     rapperButton.disabled = true;
-    nextButton.style.display = 'inline-block';
+    nextButton.style.display = 'inline-block'; //amit a show questionnál letiltottunk most megjelenítjük
 }
 
-// Következő kérdés
-nextButton.addEventListener('click', () => {
-    currentQuestionIndex++;
+// Következő kérdés ha továb akarunk jatszani
+nextButton.addEventListener('click', () => { // nem adtam nevet a függvénynek csak (arrow function)-t használok
+    currentQuestionIndex++; //növelem a lépést
     if (currentQuestionIndex < totalQuestions) {
-        showQuestion();
+        showQuestion(); //kövi kérdés
     } else {
-        endGame();
+        endGame(); //elfogyott a kerdes befejezzuk a jatekot
     }
 });
 
@@ -92,31 +89,31 @@ nextButton.addEventListener('click', () => {
 endGameButton.addEventListener('click', endGame);
 
 function endGame() {
-    gameScreen.style.display = 'none';
-    resultsScreen.style.display = 'block';
+    gameScreen.style.display = 'none'; // kikapcsolom a játék gomjait (kezelőfelület nincs)
+    resultsScreen.style.display = 'block'; // eredmények kiírása
 
     // Táblázat feltöltése
-    summaryTable.innerHTML = ""; // Táblázat törlése
-    let answeredQuestions = 0;
-    userAnswers.forEach((answer, index) => {
+    summaryTable.innerHTML = ""; // Táblázat törlése ha újra játszunk lehessen 0-ról kezdeni
+    let answeredQuestions = 0; // hany választ sdott a jatekos
+    userAnswers.forEach((answer, index) => { //mivel alapból fel van töltve üres helyekkel végig megy az egész táblázaton és kiírja az egészet
         const row = document.createElement('tr');
         const questionCell = document.createElement('td');
         const userAnswerCell = document.createElement('td');
         const correctAnswerCell = document.createElement('td');
         const songInfoCell = document.createElement('td');
-
+        //készítek egy sort és az oszlopokat
         questionCell.textContent = questions[index].text;
-        userAnswerCell.textContent = answer || "";
+        userAnswerCell.textContent = answer || ""; //lehet üres is
         correctAnswerCell.textContent = questions[index].answer;
         songInfoCell.textContent = `${questions[index].zeneElőadója}, ${questions[index].zeneCíme}`;
-
+        //eltároloom az értékekeket az adott sorhoz
         if (answer !== null) answeredQuestions++; // Csak a megválaszolt kérdések számát növeli
-
+        //ha nem üres akkor növeli a válaszolt kérdések számát
         row.appendChild(questionCell);
         row.appendChild(userAnswerCell);
         row.appendChild(correctAnswerCell);
         row.appendChild(songInfoCell);
-        summaryTable.appendChild(row);
+        summaryTable.appendChild(row); //hozzáadjuk az egész sort
     });
 
     // Összefoglaló
@@ -130,6 +127,6 @@ restartButton.addEventListener('click', () => {
     gameScreen.style.display = 'none';
 });
 
-// Költő és Repper gombok eseménykezelői
+// Költő és Repper gombok amikor költő vagy reppert kattintunk
 poetButton.addEventListener('click', () => handleAnswer("költő"));
 rapperButton.addEventListener('click', () => handleAnswer("repper"));

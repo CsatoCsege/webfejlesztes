@@ -1,0 +1,18 @@
+Az oldalt készítette: Csató Csege Károly gazdaságinformatikus hallgató (BIV92L)
+Az oldal elérhetősége githubon:
+
+https://csatocsege.github.io/webfejlesztes/projekt/koncert/index.html
+
+A beadnadóban híres koncertekről találhatsz információt. Illetve az én kedvenc előadóimról. Saját képekkel dúsítva.
+
+JavaSript, egy játék amiben ki kell találni az adott szöveg költőtől vagy reppertől származuik,
+az egész játék egy táblázat adataira épül és azokat tölti ki, törli az adott gomboknak megfelelően.
+
+Fonttípús letöltve Lexend, az index.html (általános) oldalon is megtalálható.
+A galéria képei: saját képek
+A logot favicont is én csináltam, más tartalmat internetről szereztem.(elóadók képei, híres koncertről képek)
+
+Az egész honlapomban használtam ChatGpt-t, főleg a javascriptnél mutatott olyan megoldásokat amire nem is gondoltam például Arrow function.
+
+
+
